@@ -62,7 +62,7 @@ namespace LibrariesWeb.Application.Services.Implementations
             await _repository.DeleteBookAsync(book);
             return _mapper.Map<BookDtos>(book);
         }
-        public async Task<List<BookDtos>> GetAllBookdAsync()
+        public async Task<List<BookDtos>> GetAllBookAsync()
         {
            var book = await _repository.GetAllBooks();
             return _mapper.Map<List<BookDtos>>(book);

@@ -1,0 +1,6 @@
+services:
+  librariesweb.api:
+    image: ${DOCKER_REGISTRY-}librarieswebapi
+    build:
+      context: .
+      dockerfile: LibrariesWeb.API/Dockerfile
