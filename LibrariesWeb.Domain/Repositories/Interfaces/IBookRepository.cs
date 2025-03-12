@@ -11,7 +11,7 @@ namespace LibrariesWeb.Domain.Repositories.Interfaces
         Task AddBookAsync(Book book);
         Task DeleteBookAsync(Book book);
         Task UpdateBookAsync(Book book);
-        Task GetBookByUser();
+       
         Task AddImageToBooks(Guid bookId, string imageUrl);
     }
 }

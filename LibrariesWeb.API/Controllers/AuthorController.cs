@@ -19,7 +19,7 @@ namespace LibrariesWeb.API.Controllers
         }
 
         [HttpGet("author/{authorId:guid}")]
-        [Authorize(Policy = "AdminOrUser")]
+        //[Authorize(Policy = "AdminOrUser")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetAuthorByIdAsync(Guid authorId)
@@ -30,7 +30,7 @@ namespace LibrariesWeb.API.Controllers
         }
 
         [HttpPost("author")]
-        [Authorize(Policy = "AdminOnly")]
+        //[Authorize(Policy = "AdminOnly")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -42,7 +42,7 @@ namespace LibrariesWeb.API.Controllers
         }
 
         [HttpDelete("author/{authorId:guid}")]
-        [Authorize(Policy = "AdminOnly")]
+        //[Authorize(Policy = "AdminOnly")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -68,7 +68,7 @@ namespace LibrariesWeb.API.Controllers
         [HttpGet]
         [Authorize(Policy = "AdminOrUser")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetAllAuthorAsync([FromQuery] AuthorParameters parameters)
         {

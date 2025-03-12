@@ -58,11 +58,6 @@ namespace LibrariesWeb.Persistance.Repositories.Implementation
           return   await _context.Books.FirstOrDefaultAsync(a => a.ISBN == ISBN);
         }
 
-        public Task GetBookByUser()
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task UpdateBookAsync(Book book)
         {
             _context.Books.Update(book);

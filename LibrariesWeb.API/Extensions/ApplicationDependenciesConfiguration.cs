@@ -113,7 +113,7 @@ public static partial class ApplicationDependenciesConfiguration
             .AddScoped<IAuthService, AuthService>()
             .AddScoped<IBookServices, BookServices>()
             .AddScoped<IAuthorServices, AuthorServices>()
-            .AddScoped<IIssuedBookService, IssuedBookService>()
+            //.AddScoped<IIssuedBookService, IssuedBookService>()
             .AddScoped<SeedRole>()
             .AddScoped<SeedAdmin>();
     }
@@ -122,7 +122,7 @@ public static partial class ApplicationDependenciesConfiguration
     {
         return services
             .AddScoped<IBookRepository, BookRepository>()
-            .AddScoped<IAuthorRepository, AuthorRepository>()
-            .AddScoped<IIssuedBookRepository, IssuedBookRepository>();
+            .AddScoped<IAuthorRepository, AuthorRepository>();
+            
     }
 }
